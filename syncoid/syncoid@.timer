@@ -1,0 +1,12 @@
+[Unit]
+Description=Runs syncoid %I service
+
+[Timer]
+#Every day of every month of every year at 10 minutes and 00 seconds after midnight
+OnCalendar=*-*-* 00:10:00
+#Every Monday at 00:00:00
+#OnCalendar=Weekly
+#Unit=syncoid.service
+
+[Install]
+WantedBy=timers.target

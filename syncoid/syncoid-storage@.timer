@@ -1,0 +1,12 @@
+[Unit]
+Description=Runs syncoid storage/%I service
+
+[Timer]
+#Every day of every month of every year at 55 minutes and 00 seconds after midnight
+OnCalendar=*-*-* 00:55:00
+RandomizedDelaySec=2h
+#Every Monday at 00:00:00
+#OnCalendar=Weekly
+
+[Install]
+WantedBy=timers.target

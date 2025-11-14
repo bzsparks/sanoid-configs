@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs syncoid for storage/%I dataset
+Wants=syncoid.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/syncoid --recursive --compress=lzo --no-sync-snap --create-bookmark --sshkey=/root/.ssh/id_ed25519 root@pve2:storage/%i storage/backup/incoming-pve2-storage/%i
+
+[Install]
+WantedBy=multi-user.target
