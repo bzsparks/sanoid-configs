@@ -1,2 +1,2 @@
 # sanoid-configs
-# sanoid-configs
+# syncoid-configs
